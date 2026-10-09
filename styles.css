@@ -45,6 +45,7 @@ body {
   display: flex;
   flex-direction: row;
   height: 100vh;
+  background-color: rgb(208, 225, 210);
 }
 
 .background-img {
@@ -56,7 +57,7 @@ body {
   z-index: -1;
 }
 
-.header {
+#header {
   width: 33vw;
   color: white;
 }
@@ -71,4 +72,32 @@ body {
 
 #credit-text {
   margin-top: auto;
+}
+
+#content-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 33vw);
+}
+
+#hero-text {
+  font-family: "Slackside One";
+  font-size: 2rem;
+}
+
+#form-container {
+  background-color: white;
+  padding: 2rem;
+}
+
+form {
+  background-color: white;
+}
+
+button {
+  background-color: #596d48;
+  border: 1px solid #596d48;
+  padding: 0.5rem;
+  border-radius: 3px;
+  color: white;
 }
