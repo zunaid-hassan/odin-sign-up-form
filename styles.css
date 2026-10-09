@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Slackside One";
+  src:
+    url("./fonts/SlacksideOne-Regular.woff2") format("woff2"),
+    url("./fonts/SlacksideOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --logo-color: rgb(12, 39, 112);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--logo-color);
+  font-family: "Slackside One";
+}
+
+svg {
+  color: var(--logo-color);
+}
+
+.background-img {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.9);
+}
