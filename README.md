@@ -1,2 +1,15 @@
-# odin-sign-up-form
-The Odin Project's Sign-up Form project.
+# The Odin Project: Sign-up Form
+
+### Links
+
+Project link: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form
+
+Live preview: https://zunaid-hassan.github.io/odin-sign-up-form/
+
+### Description
+
+A stylized sign-up form built for The Odin Project to practice intermediate HTML and CSS. The project focuses on building structured forms and utilizing CSS pseudo-classes to provide real-time visual feedback for user validation and active input states. It also implements custom fonts and transparent background overlays to ensure text readability against a large background image.
+
+### Credits
+
+Photo by [一只猫的橘](https://unsplash.com/@seelean?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/raindrops-creating-ripples-on-a-dark-reflective-surface-dmV6wRBzofo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
