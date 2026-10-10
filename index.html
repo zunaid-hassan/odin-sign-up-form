@@ -7,17 +7,13 @@
     <title>Sign-up Form</title>
   </head>
   <body>
-    <div id="header">
+    <div id="header-container">
       <div class="logo-elements">
-        <img
-          src="./img/raindrops.jpg"
-          class="background-img"
-          class="background-img"
-          alt="Background raindrops image" />
         <img
           src="./img/logo.svg"
           width="200"
-          alt="Meditary logo showing order from chaos" />
+          alt="Meditary logo showing order from chaos"
+          id="logo-icon" />
         <h1>meditary</h1>
       </div>
 
@@ -33,44 +29,67 @@
           >Unsplash</a
         >
       </p>
+      <!-- <img
+        src="./img/raindrops.jpg"
+        class="background-img"
+        alt="Background raindrops image" /> -->
     </div>
     <div id="content-container">
-      <div id="hero-text">
-        Embrace the chaos raging within yourself, in order to claim the order
-        awaiting you.
+      <div id="hero-text-container">
+        <p>
+          Embrace the chaos raging within you, <br />
+          and claim the order destined for you.
+        </p>
+        <p>You <em>deserve</em> peace.</p>
       </div>
       <div id="form-container">
-        <p>Let's do this!</p>
+        <h2>Let's do this!</h2>
         <form action="#" method="get" id="sign-up-form">
-          <label for="fname">FIRST NAME</label>
-          <input type="text" id="fname" name="fname" placeholder="John" />
+          <div>
+            <label for="fname">FIRST NAME</label>
+            <input type="text" id="fname" name="fname" placeholder="John" />
+          </div>
 
-          <label for="lname">LAST NAME</label>
-          <input type="text" id="lname" name="lname" placeholder="Odinson" />
+          <div>
+            <label for="lname">LAST NAME</label>
+            <input type="text" id="lname" name="lname" placeholder="Odinson" />
+          </div>
 
-          <label for="email">EMAIL</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="j.odinson@email.com" />
+          <div>
+            <label for="email">EMAIL</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="j.odinson@topmail.com" />
+          </div>
 
-          <label for="phone-number">PHONE NUMBER</label>
-          <input
-            type="tel"
-            id="phone-number"
-            name="phone-number"
-            placeholder="012-345678" />
+          <div>
+            <label for="phone-number">PHONE NUMBER</label>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              placeholder="012-345678" />
+          </div>
 
-          <label for="password2">PASSWORD</label>
-          <input type="password" id="password2" name="password2" />
+          <div>
+            <label for="password1">PASSWORD</label>
+            <input type="password" id="password1" name="password1" />
+          </div>
 
-          <label for="password2">PASSWORD</label>
-          <input type="password" id="password2" name="password2" />
+          <div>
+            <label for="password2">PASSWORD</label>
+            <input type="password" id="password2" name="password2" />
+          </div>
         </form>
       </div>
-      <button type="submit" form="sign-up-form">Create Account</button>
-      <p>Already have an account? <a href="#">Log in</a></p>
+      <div id="bottom-container">
+        <button type="submit" form="sign-up-form">Create Account</button>
+        <p id="account-check-text">
+          Already have an account? <a href="#">Log in</a>
+        </p>
+      </div>
     </div>
   </body>
 </html>

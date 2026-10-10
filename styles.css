@@ -8,8 +8,51 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Averia Sans Libre";
+  src:
+    url("./fonts/AveriaSansLibre-Bold.woff2") format("woff2"),
+    url("./fonts/AveriaSansLibre-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  src:
+    url("./fonts/AveriaSansLibre-BoldItalic.woff2") format("woff2"),
+    url("./fonts/AveriaSansLibre-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  src:
+    url("./fonts/AveriaSansLibre-Italic.woff2") format("woff2"),
+    url("./fonts/AveriaSansLibre-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  src:
+    url("./fonts/AveriaSansLibre-Regular.woff2") format("woff2"),
+    url("./fonts/AveriaSansLibre-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --logo-color: white;
+  --accent-color: #596d48;
+  --background-color: rgb(208, 225, 210);
+  --dark-background-color: rgba(0, 0, 0, 0.527);
 
   font-family:
     "Roboto",
@@ -35,6 +78,7 @@
 h1 {
   color: var(--logo-color);
   font-family: "Slackside One";
+  font-size: 3rem;
 }
 
 svg {
@@ -45,49 +89,83 @@ body {
   display: flex;
   flex-direction: row;
   height: 100vh;
-  background-color: rgb(208, 225, 210);
+  background-color: var(--background-color);
 }
 
 .background-img {
   position: absolute;
   left: 0;
   /* height: 100vh; */
-  width: 33vw;
+  width: calc((1 / 3) * 100vw);
   height: auto;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
-#header {
-  width: 33vw;
+#header-container {
+  width: calc((1 / 3) * 100vw);
   color: white;
+  height: 100vh;
+  background-image: url(./img/raindrops.jpg);
+
+  /* background-image: url(./img/rain-raindrops.gif); */
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: auto 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 
 .logo-elements {
   display: flex;
-  flex: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 50%);
+  background-color: var(--dark-background-color);
+  position: relative;
+  top: 15rem;
+  gap: 1rem;
+  padding: 2rem;
+  width: calc((1 / 3) * 100vw);
+}
+
+#logo-icon {
+  width: 7rem;
 }
 
 #credit-text {
   margin-top: auto;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+
+  background-color: var(--dark-background-color);
+
+  width: calc((1 / 3) * 100vw);
+  text-align: center;
+}
+
+#credit-text a {
+  color: white;
 }
 
 #content-container {
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 33vw);
+  width: calc((2 / 3) * 100vw);
 }
 
-#hero-text {
-  font-family: "Slackside One";
+#hero-text-container {
+  /* font-family: "Slackside One"; */
+  font-family: "Averia Sans Libre";
   font-size: 2rem;
+  flex-direction: column;
 }
 
 #form-container {
   background-color: white;
   padding: 2rem;
+  flex-direction: column;
 }
 
 form {
@@ -95,9 +173,53 @@ form {
 }
 
 button {
-  background-color: #596d48;
-  border: 1px solid #596d48;
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   padding: 0.5rem;
   border-radius: 3px;
   color: white;
+}
+
+button:hover {
+  background-color: #769060;
+  border-color: #769060;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #333e29;
+  border-color: #333e29;
+
+  cursor: pointer;
+}
+
+#hero-text-container,
+#form-container,
+#bottom-container {
+  height: calc((1 / 3) * 100vh);
+  display: flex;
+  padding: 3rem;
+}
+
+#bottom-container {
+  flex-direction: column;
+}
+
+#account-check-text a {
+  color: var(--accent-color);
+}
+
+#account-check-text a:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+#form-container * {
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
 }
