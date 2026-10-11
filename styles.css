@@ -298,15 +298,20 @@ input:focus {
 
 input:user-invalid {
   border-color: tomato;
-  background-color: pink;
+  background-color: rgba(255, 192, 203, 0.464);
 }
 
 input:user-valid {
   border-color: lightgreen;
-  background-color: rgb(197, 244, 197);
+  background-color: rgba(211, 244, 211, 0.505);
 }
 
 input[type="password"]:user-invalid + span::after {
   content: "⚠ Password must be at least 4 characters long";
   color: tomato;
+}
+
+input[type="password"]:user-valid + span::after {
+  content: "Looks good! ✔";
+  color: lightgreen;
 }
