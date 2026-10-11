@@ -69,6 +69,7 @@
   --accent-color: #596d48;
   --background-color: rgb(208, 225, 210);
   --dark-background-color: rgba(0, 0, 0, 0.527);
+  --click-color: #333e29;
 
   font-family:
     "Roboto",
@@ -187,7 +188,7 @@ body {
   /* font-family: "Slackside One"; */
   /* font-family: "Averia Sans Libre"; */
   font-family: "Mistical Spring";
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   flex-direction: column;
 }
 
@@ -223,6 +224,7 @@ button[id="sign-up-button"] {
   color: white;
   width: 15rem;
   font-size: 1.2rem;
+  box-shadow: 2px 2px 10px grey;
 }
 
 button[id="sign-up-button"]:hover {
@@ -232,8 +234,8 @@ button[id="sign-up-button"]:hover {
 }
 
 button[id="sign-up-button"]:active {
-  background-color: #333e29;
-  border-color: #333e29;
+  background-color: var(--click-color);
+  border-color: var(--click-color);
 
   cursor: pointer;
 }
@@ -256,6 +258,11 @@ button[id="sign-up-button"]:active {
 
 #account-check-text a:hover {
   background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+#account-check-text a:active {
+  background-color: var(--click-color);
   color: var(--background-color);
 }
 
