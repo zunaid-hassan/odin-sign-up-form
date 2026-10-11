@@ -215,21 +215,23 @@ form {
   background-color: white;
 }
 
-button {
+button[id="sign-up-button"] {
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  padding: 0.5rem;
-  border-radius: 3px;
+  padding: 1rem;
+  border-radius: 10px;
   color: white;
+  width: 15rem;
+  font-size: 1.2rem;
 }
 
-button:hover {
+button[id="sign-up-button"]:hover {
   background-color: #769060;
   border-color: #769060;
   cursor: pointer;
 }
 
-button:active {
+button[id="sign-up-button"]:active {
   background-color: #333e29;
   border-color: #333e29;
 
@@ -245,6 +247,7 @@ button:active {
 
 #bottom-container {
   flex-direction: column;
+  gap: 2rem;
 }
 
 #account-check-text a {
@@ -287,18 +290,23 @@ input {
 }
 
 input:focus {
-  box-shadow: 0px 0px 3px grey;
+  box-shadow: 1px 1px 5px rgb(171, 171, 171);
   outline: 2px solid lightskyblue;
   outline-offset: -2px;
   /* background-color: rgb(220, 238, 249); */
 }
 
-input[type="password"]:user-invalid {
+input:user-invalid {
   border-color: tomato;
   background-color: pink;
 }
 
-input[type="password"]:user-valid {
+input:user-valid {
   border-color: lightgreen;
   background-color: rgb(197, 244, 197);
+}
+
+input[type="password"]:user-invalid + span::after {
+  content: "⚠ Password must be at least 4 characters long";
+  color: tomato;
 }
