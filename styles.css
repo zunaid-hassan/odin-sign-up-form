@@ -69,6 +69,11 @@
     sans-serif;
 }
 
+.slackside-font {
+  font-family: "Slackside One";
+  font-size: 2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -218,7 +223,7 @@ button:active {
   color: var(--background-color);
 }
 
-#form-container * {
+#form-container div {
   display: flex;
   flex-direction: column;
 }
