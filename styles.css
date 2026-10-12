@@ -320,6 +320,6 @@ button[id="sign-up-button"]:active {
 }
 
 ::selection {
-  background-color: var(--accent-color);
+  background-color: #596d48d6;
   color: var(--background-color);
 }
