@@ -8,7 +8,7 @@ Live preview: https://zunaid-hassan.github.io/odin-sign-up-form/
 
 ### Description
 
-A stylized sign-up form built for The Odin Project to practice intermediate HTML and CSS. There is no JavaScript in this project. The project focuses on building structured forms and utilizing CSS pseudo-classes to provide real-time visual feedback for user validation and active input states. Validation rules are intentionally simple, to demonstrate `:user-valid` and `:user-invalid` styles. It also implements custom fonts and transparent background overlays to ensure text readability against a large background image.
+A stylized sign-up form built for The Odin Project to practice intermediate HTML and CSS. There is no JavaScript in this project. The project focuses on building structured forms and utilizing CSS pseudo-classes to provide real-time visual feedback for user validation and active input states. Validation rules are intentionally simple, to demonstrate `:user-valid`, `:user-invalid`, and `:focus` styles. It also implements custom fonts and transparent background overlays to ensure text readability against a large background image.
 
 ### Preview
 
