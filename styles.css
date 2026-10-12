@@ -24,52 +24,16 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Averia Sans Libre";
-  src:
-    url("./fonts/AveriaSansLibre-Bold.woff2") format("woff2"),
-    url("./fonts/AveriaSansLibre-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Averia Sans Libre";
-  src:
-    url("./fonts/AveriaSansLibre-BoldItalic.woff2") format("woff2"),
-    url("./fonts/AveriaSansLibre-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Averia Sans Libre";
-  src:
-    url("./fonts/AveriaSansLibre-Italic.woff2") format("woff2"),
-    url("./fonts/AveriaSansLibre-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Averia Sans Libre";
-  src:
-    url("./fonts/AveriaSansLibre-Regular.woff2") format("woff2"),
-    url("./fonts/AveriaSansLibre-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --logo-color: white;
   --accent-color: #596d48;
   --background-color: rgb(208, 225, 210);
   --dark-background-color: rgba(0, 0, 0, 0.527);
   --click-color: #333e29;
+  --invalid-color: tomato;
+  --valid-color: lightgreen;
+  --invalid-color-text: firebrick;
+  --valid-color-text: seagreen;
 
   font-family:
     "Roboto",
@@ -100,6 +64,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Mistical Spring";
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
 }
 
 h1 {
@@ -167,9 +143,7 @@ body {
   margin-top: auto;
   color: rgb(255, 255, 255);
   padding: 1rem;
-
   background-color: var(--dark-background-color);
-
   width: calc((1 / 3) * 100vw);
   text-align: center;
 }
@@ -182,6 +156,13 @@ body {
   display: flex;
   flex-direction: column;
   width: calc((2 / 3) * 100vw);
+}
+
+#hero-text-container,
+#form-container,
+#bottom-container {
+  display: flex;
+  padding: 3rem;
 }
 
 #hero-text-container {
@@ -198,22 +179,95 @@ h2 {
 
 #form-container {
   background-color: white;
-  padding: 2rem;
+  padding: 1rem 3rem 2rem 3rem;
   flex-direction: column;
   box-shadow: 2px 2px 10px grey;
-  /* flex-wrap: wrap; */
 }
+
+#form-container div {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  gap: 5px;
+  flex: 1 1 auto;
+}
+
 #sign-up-form {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  padding-top: 2rem;
+  row-gap: 1.5rem;
 }
 
-#form-container * {
-  /* outline: 2px solid red; */
-}
 form {
   background-color: white;
+}
+
+input {
+  border: 2px solid var(--background-color);
+  border-radius: 3px;
+  padding: 10px;
+  min-width: 10rem;
+  width: 25rem;
+  height: 2.5rem;
+}
+
+input:focus {
+  box-shadow: 1px 1px 5px rgb(171, 171, 171);
+  outline: 2px solid lightskyblue;
+  outline-offset: -2px;
+  /* background-color: rgb(220, 238, 249); */
+}
+
+input:user-invalid {
+  border-color: var(--invalid-color);
+  background-color: rgba(255, 192, 203, 0.464);
+}
+
+input:user-valid {
+  border-color: var(--valid-color);
+  background-color: rgba(211, 244, 211, 0.505);
+}
+
+input[type="text"]:user-invalid + span::after {
+  content: "⚠ Name must be letters, spaces, or hypens only";
+  color: var(--invalid-color-text);
+}
+
+input[type="text"]:user-valid + span::after {
+  content: "✔ Looks good!";
+  color: var(--valid-color-text);
+}
+
+input[type="email"]:user-invalid + span::after {
+  content: "⚠ Invalid email";
+  color: var(--invalid-color-text);
+}
+
+input[type="tel"]:user-valid + span::after {
+  content: "✔ Looks good!";
+  color: var(--valid-color-text);
+}
+
+input[type="tel"]:user-invalid + span::after {
+  content: "⚠ Phone number must contain numbers only";
+  color: var(--invalid-color-text);
+}
+
+input[type="email"]:user-valid + span::after {
+  content: "✔ Looks good!";
+  color: var(--valid-color-text);
+}
+
+input[type="password"]:user-invalid + span::after {
+  content: "⚠ Password must be at least 4 characters long";
+  color: var(--invalid-color-text);
+}
+
+input[type="password"]:user-valid + span::after {
+  content: "✔ Looks good!";
+  color: var(--valid-color-text);
 }
 
 button[id="sign-up-button"] {
@@ -240,13 +294,6 @@ button[id="sign-up-button"]:active {
   cursor: pointer;
 }
 
-#hero-text-container,
-#form-container,
-#bottom-container {
-  display: flex;
-  padding: 3rem;
-}
-
 #bottom-container {
   flex-direction: column;
   gap: 2rem;
@@ -266,59 +313,7 @@ button[id="sign-up-button"]:active {
   color: var(--background-color);
 }
 
-#form-container div {
-  display: flex;
-  flex-direction: column;
-}
-
 ::selection {
   background-color: var(--accent-color);
   color: var(--background-color);
-}
-
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-
-  width: 20rem;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  appearance: none;
-}
-
-input {
-  border: 2px solid var(--background-color);
-  border-radius: 3px;
-  padding: 4px;
-}
-
-input:focus {
-  box-shadow: 1px 1px 5px rgb(171, 171, 171);
-  outline: 2px solid lightskyblue;
-  outline-offset: -2px;
-  /* background-color: rgb(220, 238, 249); */
-}
-
-input:user-invalid {
-  border-color: tomato;
-  background-color: rgba(255, 192, 203, 0.464);
-}
-
-input:user-valid {
-  border-color: lightgreen;
-  background-color: rgba(211, 244, 211, 0.505);
-}
-
-input[type="password"]:user-invalid + span::after {
-  content: "⚠ Password must be at least 4 characters long";
-  color: tomato;
-}
-
-input[type="password"]:user-valid + span::after {
-  content: "Looks good! ✔";
-  color: lightgreen;
 }
