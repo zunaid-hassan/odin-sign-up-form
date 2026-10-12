@@ -12,7 +12,7 @@ A stylized sign-up form built for The Odin Project to practice intermediate HTML
 
 ### Preview
 
-<img src="./img/preview.png" width="500" alt="Screenshot of the sign-up form with raindrop background">
+<img src="./img/preview.png" width="700" alt="Screenshot of the sign-up form with raindrop background">
 
 ### Credits
 
