@@ -217,6 +217,7 @@ input {
   min-width: 10rem;
   width: 25rem;
   height: 2.5rem;
+  font-family: "Roboto", sans-serif;
 }
 
 input:focus {
